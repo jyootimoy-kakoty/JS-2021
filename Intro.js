@@ -88,3 +88,10 @@ const description = `${country} is in ${continent}, and its population is ${popu
 console.log(description);
 
 //Everyting in JS is either an object or a primitive.
+//data types.
+
+So there are seven primitive data types,
+
+number, string, bullion, undefined, null,
+
+symbol and big int.
