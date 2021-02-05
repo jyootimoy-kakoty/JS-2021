@@ -111,4 +111,4 @@ console.log(heightF, heightI, height);
 height = 0.3048 * height;
 console.log(heightF, heightI, height);
 BMI = weight / height ** 2;
-console.log(`BMI: ${BMI}`);
+console.log(`BMI: ${BMI}👌`);//Press Windows + . for the emoji window pop-up
