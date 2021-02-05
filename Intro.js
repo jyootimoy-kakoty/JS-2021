@@ -89,9 +89,26 @@ console.log(description);
 
 //Everyting in JS is either an object or a primitive.
 //data types.
+//So there are seven primitive data types:
+//number, string, boolean, undefined, null, symbol (ES2015) and bigint (ES2020).
+//We can change the type of a variable easily.
+//I need to point out that we actually don't even have to declare variables at all.
+//We can just write some variable and assign a value to it.
 
-So there are seven primitive data types,
-
-number, string, bullion, undefined, null,
-
-symbol and big int.
+//BMI calculator
+let weight, height, heightF, heightI, BMI;
+//alert(`enter weight (Kg): ${weight = Event.key}`);
+//alert(`enter height (Feet): ${height = Event.key}`);
+weight = prompt("Please enter your Weight (Kg.Gm)", 0.00);
+heightF = prompt("Please enter your Height (Feet.Inch)", 0.00);
+heightI = heightF;
+heightF = Math.floor(heightF);
+heightI -= heightF;
+console.log(heightF, heightI, height);
+heightI /= .12;
+height = heightF + heightI;
+console.log(heightF, heightI, height);
+height = 0.3048 * height;
+console.log(heightF, heightI, height);
+BMI = weight / height ** 2;
+console.log(`BMI: ${BMI}`);
