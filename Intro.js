@@ -123,6 +123,38 @@ console.log(`BMI: ${BMI}👌`);//Press Windows + . for the emoji window pop-up
 
 //'use strict';
 
+/*
 let callLetters = true;
 if(callLetter == true) console.log('you can enter'); //'s' missing at the end of the variable
+*/
+
+/*Function*/
+function hello(){
+    console.log('hi there!');    
+}
+
+hello();
+hello();
+
+/*Function expression works the same way as function declaration*/
+function def1(val){
+    return `you have entered ${val}`;
+}
+console.log(def1(5));
+
+//Function expression
+const def2 = function (val){
+    return `you have entered ${val}`;
+}
+console.log(def2(10));
+
+/*Arrow Function*/
+const def3 = val => `you have entered ${val}`;
+console.log(def3(100));
+
+//Arrow Function with 2 variables
+const def4 = (val1, val2) => {
+    return `you have entered ${val1} and ${val2}`;
+}
+console.log(def4(100, 200));
 
