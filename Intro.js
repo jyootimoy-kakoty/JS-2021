@@ -158,3 +158,14 @@ const def4 = (val1, val2) => {
 }
 console.log(def4(100, 200));
 
+/*Arrays*/
+const fruit = ['apple', 'mango', 'banana'];
+console.log(fruit[0], fruit[1], fruit[2]);
+console.log(fruit);
+console.log(fruit[3], fruit[-1]);
+
+//"const" definition binds only to primitive data types
+//Hence, we can modify the value of a array member, where array declared as const
+fruit[0] = 'grapes';
+console.log(fruit);
+
