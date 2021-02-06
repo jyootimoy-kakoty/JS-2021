@@ -95,7 +95,7 @@ console.log(description);
 //I need to point out that we actually don't even have to declare variables at all.
 //We can just write some variable and assign a value to it.
 
-//BMI calculator
+/*BMI calculator*/
 let weight, height, heightF, heightI, BMI;
 //alert(`enter weight (Kg): ${weight = Event.key}`);
 //alert(`enter height (Feet): ${height = Event.key}`);
@@ -112,3 +112,17 @@ height = 0.3048 * height;
 console.log(heightF, heightI, height);
 BMI = weight / height ** 2;
 console.log(`BMI: ${BMI}👌`);//Press Windows + . for the emoji window pop-up
+
+/*Strict Nodes*/
+//Always just put strict mode in the beginning of your scripts to write more secure code.
+//And when secure, I mean that strict mode makes it easier for developers to avoid accidental errors.
+//So basically it helps us to avaoid introducing bugs into our code, that's because of 2 reasons:
+//Firstly, strict mode forbids us to do certain things.
+//Secondly, it will actually create visible errors for us in certain situations in which without 
+//strict mode JS will simply fail silently without letting us know that we did a mistake.
+
+//'use strict';
+
+let callLetters = true;
+if(callLetter == true) console.log('you can enter'); //'s' missing at the end of the variable
+
