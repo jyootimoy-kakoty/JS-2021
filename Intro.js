@@ -169,3 +169,25 @@ console.log(fruit[3], fruit[-1]);
 fruit[0] = 'grapes';
 console.log(fruit);
 
+//Array support disimilar data types in one construct
+const array1 = ['maruti', 'tata', 'mahindra', 2021, 'tesla', 340/34];
+console.log(array1);
+console.log(array1 + 4);
+console.log(5 + array1 + 4);
+console.log(array1 * 4);//NaN stands for not a number
+console.log(array1 - 4);//NaN stands for not a number
+console.log(array1 / 4);//NaN stands for not a number
+array1[6] = 25;
+console.log(array1);
+
+//Array methods
+array1.push(55);
+console.log(array1);
+array1.pop();
+console.log(array1);
+console.log(array1.indexOf('tata'));
+console.log(array1);
+array1.shift(3);
+console.log(array1);
+console.log(array1.includes(2021));
+console.log(array1);
