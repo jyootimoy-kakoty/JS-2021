@@ -191,3 +191,25 @@ array1.shift(3);
 console.log(array1);
 console.log(array1.includes(2021));
 console.log(array1);
+
+/*Objects*/
+//In Array we need to access members by their index only, however in Object we have key-value
+//pair structure, which makes accessing members easy.
+const Array2D = [//Array
+    'jyootimoy',
+    'kakoty',
+    2021-1995,
+    'freelancer',
+    ['sunny', 'aditya', 'manas']
+];
+
+const Object2D = {//Object
+    fname: 'jyootimoy',
+    lname: 'kakoty',
+    age: 2021-1995,
+    profession: 'freelancer',
+    friends: ['sunny', 'aditya', 'manas']
+};
+
+console.log(Array2D);
+console.log(Object2D);
