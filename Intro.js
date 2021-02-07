@@ -187,9 +187,10 @@ array1.pop();
 console.log(array1);
 console.log(array1.indexOf('tata'));
 console.log(array1);
-array1.shift(3);
+array1.shift();
 console.log(array1);
 console.log(array1.includes(2021));
+array1.slice();
 console.log(array1);
 
 /*Objects*/
@@ -215,3 +216,11 @@ console.log(Array2D);
 console.log(Object2D);
 console.log(Object2D.fname);
 console.log(Object2D['lname']);
+
+
+/*for loop*/
+for(let i = 0; i < 4; i++){
+    console.log(`i = ${i}: rose day`);
+}
+
+console.log('');
