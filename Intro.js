@@ -213,3 +213,5 @@ const Object2D = {//Object
 
 console.log(Array2D);
 console.log(Object2D);
+console.log(Object2D.fname);
+console.log(Object2D['lname']);
