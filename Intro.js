@@ -190,6 +190,7 @@ console.log(array1);
 array1.shift();
 console.log(array1);
 console.log(array1.includes(2021));
+debugger;
 array1.slice();
 console.log(array1);
 
@@ -222,5 +223,6 @@ console.log(Object2D['lname']);
 for(let i = 0; i < 4; i++){
     console.log(`i = ${i}: rose day`);
 }
-
-console.log('');
+const input = prompt('enter a number');
+let output = Number(input)
+console.log(input, typeof(input), Number(input), output, typeof(output));
