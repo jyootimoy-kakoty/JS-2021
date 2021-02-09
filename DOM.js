@@ -88,6 +88,19 @@ togBtn.addEventListener('click', function(){
 //some special threads inside the engine that we cannot access from our code.
 //So completely separate from the main thread that is basically running in call stack executing our own code.
 
-
+/*JS Runtime*/
+//In JS runtime web APIs are essential functionalities provided to the engine, but which are actually
+//not part of the JavaScript language itself. JavaScript simply gets access to these APIs through
+//the global window object. But it still makes sense that the web APIs are also part of the runtime,
+//because again a runtime is just like a box that contains all the JavaScript related stuff that we need.
+//Next a typical JavaScript runtime also includes a so called callback queue.
+//Callback queue is a data structure that contains all the callback functions that are ready to be executed.
+//For example we attach event handler functions to DOM elements like a button to react to certain events, right?
+//And these event handler functions are also called callback functions. So as the event happens,
+//for example: a click, the callback function will be called. And that's how it actually works behind the scene.
+//So the first thing that actually happens after the event is that the callback function is put into
+//the callback queue. Then when the stack is empty the callback function is passed to the stack
+//so that it can be executed. And this happens by something called the event loop.So basically
+//the event loop takes callback functions from the callback queue & puts them in the call stack to execute.
 
 
