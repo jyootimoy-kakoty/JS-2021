@@ -60,3 +60,10 @@ const togDiv = document.querySelector('.tog')
 togBtn.addEventListener('click', function(){
     togDiv.classList.toggle('hidden');
 });
+
+//Passing a function into another function as an argument is called 1st class function.
+//JS is Single-threaded, so could perform a single task at a time.
+//Hence, event loops (Non-blocking) are required to handle long running tasks.
+//Event loops possess non-blocking behaviour takes long running tasks, execute them in background,
+//and put them back once they are finished.
+//
