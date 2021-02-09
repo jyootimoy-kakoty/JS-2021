@@ -52,3 +52,11 @@ document.addEventListener('keydown', function(event){
         }
     }
 });
+
+/*Classlist.toggle method */
+//If a class is present toggle removes it and if not present then adds the same.
+const togBtn = document.querySelector('.togBtn');
+const togDiv = document.querySelector('.tog')
+togBtn.addEventListener('click', function(){
+    togDiv.classList.toggle('hidden');
+});
