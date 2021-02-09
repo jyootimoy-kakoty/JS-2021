@@ -61,9 +61,33 @@ togBtn.addEventListener('click', function(){
     togDiv.classList.toggle('hidden');
 });
 
+/*JS Thread & Event Loop*/
 //Passing a function into another function as an argument is called 1st class function.
 //JS is Single-threaded, so could perform a single task at a time.
 //Hence, event loops (Non-blocking) are required to handle long running tasks.
 //Event loops possess non-blocking behaviour takes long running tasks, execute them in background,
 //and put them back once they are finished.
-//
+
+/*JS Engine*/
+//JS Engine is a program that runs JS code.
+//Google's "V8 Engine" is one of the popular JS Engine which powers Chrome and NodeJS.
+//Any JS Engine has two things: Call Stack and Heap
+//The call stack is where our code is actually executed using something called execution contexts.
+//The heap is an unstructured memory pool which stores all the objects that our application needs.
+//JS is purely interpreted language however, modern JS engines uses a mix between
+//compilation and interpretation which is called "just-in-time compilation".
+//This approach basically compiles the entire code into machine code at once and then executes it right away
+//Machine code is not put into any binary file like usual compilation does.
+//Modern JavaScript engines actually have some pretty clever optimization strategies.
+//What they do is creates a very unoptimized version of machine code in the beginning just so that
+//it can start executing as fast as possible. Then in the background, this code is being optimized
+//and recompiled during the already running program execution. And this can be done most of the times
+//After each optimization the unoptimized code is simply swept for the new more optimized code
+//without ever stopping execution of course. This process is what makes modern engines
+//such as the V-Eight so fast and all this parsing, compilation and optimization happens in 
+//some special threads inside the engine that we cannot access from our code.
+//So completely separate from the main thread that is basically running in call stack executing our own code.
+
+
+
+
