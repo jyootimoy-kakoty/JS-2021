@@ -124,7 +124,7 @@ togBtn.addEventListener('click', function(){
 //function declarations              yes            actual function             block (in only strict mode), function otherwise
 //var variables                      yes            undefined                   function
 //let and const variables             no            <uninitialized>, TDZ       block
-//function expressions & arrows 
+//function expressions & arrows    ---depends whether we are using var or let/const ---
 
 //Now, hoisting does not work the same for all variable types.
 //And so let's analyze the way hosting works.
