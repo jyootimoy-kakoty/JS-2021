@@ -110,3 +110,45 @@ togBtn.addEventListener('click', function(){
 //In JavaScript, we have the global scope, function scope, and block scope.
 //Scope chain is the order in which functions are written in the code. It has nothing to do
 //with order in which function are called.
+
+/*Hoisting*/
+//In JavaScript we have a mechanism called hoisting. It makes some types of variables accessible/usable
+//in the code before they are actually declared.
+//Variables are not magically lifted/moved to the top of their scope.
+//Instead, behind the scenes the code is basically scanned for variable declarations before it is executed.
+//So this happens during the so-called creation phase of the execution context.
+//Then for each variable that is found in the code, a new property is created in a variable environment object.
+//And that's how hoisting really works. 
+
+//                                *Hoisted*        *initial value*            *scope*
+//function declarations              yes            actual function             block (in only strict mode), function otherwise
+//var variables                      yes            undefined                   function
+//let and const variables             no            <uninitialized>, TDZ       block
+//function expressions & arrows 
+
+//Now, hoisting does not work the same for all variable types.
+//And so let's analyze the way hosting works.
+//So function declarations are actually hoisted & the initial value in the variable environment
+//is set to the actual function. So in practice, what this means is that we can use function declarations
+//before they are actually declared in the code, again, because they are stored in the variable 
+//environment object, even before the code starts executing.
+//This is why because of hoisting function declarations work before they are actually declared.
+//Just keep in mind that this is only true for strict mode.
+//So if you're using a sloppy mode, which you shouldn't, then functions are functioned sculpt.
+//Next, variables declared with var are also hoisted, but hoisting works in a different way here.
+//So unlike functions, when we try to access a var variable before it's declared in a code,
+//we don't get the declared value but we get undefined. And this is a really weird behavior for beginners.
+//You might expect that you simply get an error when using a variable before declaring it or to
+//get the actual value. 
+//And actually this behavior is a common source of bugs in JavaScript.
+//So this is one of the main reasons why in modern JavaScript we almost never use var.
+//Now on the other hand, let and const variables are not hoisted.
+//I mean, technically they are actually hoisted but their value is basically set to an initialized.
+//So there is no value to work with at all. In practice, it is as if hoisting was not happening at all.
+//Instead, we say that these variables are placed in a so-called Temporal Dead Zone or TDZ
+//which makes it so that we can't access the variables before the beginning of the scope.
+//TDZ makes it easier to avoid and catch errors.
+//So as a consequence, if we attempt to use a let or const variable before it's declared, we get an error.
+//Also keep in mind that let and const are block scoped.
+//So they exist only in the block in which they were created.
+//And all these factors together is basically the reason why we use let and const instead of var in modern JS.
