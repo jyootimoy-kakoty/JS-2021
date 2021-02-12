@@ -104,3 +104,9 @@ togBtn.addEventListener('click', function(){
 //the event loop takes callback functions from the callback queue & puts them in the call stack to execute.
 
 
+/*Scope*/
+//Scoping defines how our program variables are organized and accessed.
+//It's the space or environment in which certain variable is declared.
+//In JavaScript, we have the global scope, function scope, and block scope.
+//Scope chain is the order in which functions are written in the code. It has nothing to do
+//with order in which function are called.
