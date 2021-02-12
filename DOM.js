@@ -152,3 +152,17 @@ togBtn.addEventListener('click', function(){
 //Also keep in mind that let and const are block scoped.
 //So they exist only in the block in which they were created.
 //And all these factors together is basically the reason why we use let and const instead of var in modern JS.
+
+/*This keyword*/
+//This means object that is calling the method.
+//In strict mode this = undefined for simple function call however, = window (otherwise in the browser).
+//And finally, if a function is called as an event listener, then the this keyword will always point
+//to the DOM element that the handler function is attached to.
+//This keyword in the global scope is simply the window object.
+//Importantly, this will never point to the function in which we are using it.
+//Also, the this keyword will never point to the variable environment of the function.
+//Remember, arrow functions do not get their own 'this keyword'.
+//Instead, if you use 'the this variable' in an arrow function, it will simply be the this keyword
+//of the surrounding function. So of the parent function and in technical terms, this is called the 
+//'lexical this keyword,' because it simply gets picked up from the outer lexical scope of the arrow function.
+
