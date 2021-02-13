@@ -203,3 +203,24 @@ console.log(str1);
 const [A, B, ...C] = [...arr, ...str];//Rest Pattern should always be at the end, here 'C'
 console.log(A, B, C);
 
+/*Short-Circuting*/
+//In the case of the OR operator, short circuiting means that if the first value is a true value,
+//it will immediately return that first value and the other operand will not even be evaluated.
+console.log(3 || 'Jyootimoy');
+console.log('' || 5);
+console.log(' ' || 5);
+console.log(null || undefined);
+console.log(undefined || null);
+//AND will return the last true value iff all true, else return the false value
+console.log(0 && 'hi');
+console.log(10 && 5);
+console.log('hello'&& 5 && null && 'boy');
+const guest = resturant.guests ? resturant.guests : 5;
+console.log(guest);
+resturant.guests = 10;
+const guest1 = resturant.guests ? resturant.guests : 5;
+console.log(guest1);
+
+/*Nullish Coalescing*/
+const guest2 = resturant.guest ?? 55;
+console.log(guest2);
