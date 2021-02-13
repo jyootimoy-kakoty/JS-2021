@@ -198,3 +198,8 @@ console.log(...str);
 console.log(...str, ',', 'k', 'a', 'k', 'o', 't', 'y');
 const str1 = [...str, ...'kakoty'];
 console.log(str1);
+
+/*Rest Pattern*/
+const [A, B, ...C] = [...arr, ...str];//Rest Pattern should always be at the end, here 'C'
+console.log(A, B, C);
+
