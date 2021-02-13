@@ -172,3 +172,18 @@ const [x, y, z, u] = arr;
 console.log(x, y, z, u);
 console.log(arr);
 
+/*Destructuring Objects*/ //Destructuring helps in dealing with 3rd party data
+const resturant = {
+    resturantName: 'Tholua, the ethnic hub',
+    openingHours: {
+        open: 9,
+        close: 8
+    },
+    resturantLocations: ['Sivasagar', 'Gaurisagar', 'Amguri', 'Jhanji', 'Rudrasagar']
+};
+const {resturantName: name, openingHours: hours, resturantLocations: locations} = resturant;
+console.log(name, hours, locations);
+//Default value and adding extra property
+const {menu = [], resturantName: name1 = 'Kareng Resort', openingHours: hours1 = {open: 9, close: 7}} = resturant;
+console.log(menu, name1, hours1);
+console.log(resturant);
