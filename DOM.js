@@ -248,3 +248,21 @@ console.log(Object.values(hours));
 console.log(Object.entries(hours));
 for(const [key, {open, close}] of Object.entries(hours))
     console.log(`On ${key} we open at ${open} and close at ${close}`);
+
+/*Sets*/
+//And a set is basically just a collection of unique values. So that means that
+//a set can never have any duplicates. And that property makes them useful
+//in certain situations.
+const set1 = new Set(['Indigo', 'Go Air', 'Spice Jet', 'Indigo', 'Spice Jet', 'Air India', 'Vistara', 'Indigo', 'Air Asia']);
+console.log(set1);
+console.log('size of set1: ' + set1.size);
+console.log(set1.has('Air India'));
+set1.add('Jet Airways', 'Kingfisher');//Only first one added
+console.log(set1);
+console.log(set1.delete('Kingfisher'));//prints false as couldn't delete absent item
+//set1.clear();
+console.log(set1);
+console.log(new Set('JavaScript'));
+const set2 = new Set('Indigo', 'Go Air', 'Spice Jet', 'Indigo');//Takes only first string
+console.log(set2);
+console.log('size of set2: ' + set2.size);
