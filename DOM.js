@@ -224,3 +224,6 @@ console.log(guest1);
 /*Nullish Coalescing*/
 const guest2 = resturant.guest ?? 55;
 console.log(guest2);
+
+/*For loop Alternative way*/
+for(const i of arr) console.log(i);
