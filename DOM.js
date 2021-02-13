@@ -224,6 +224,13 @@ console.log(guest1);
 /*Nullish Coalescing*/
 const guest2 = resturant.guest ?? 55;
 console.log(guest2);
+const guest3 = resturant.guest1 ?? 75;
+console.log(guest3);
 
 /*For loop Alternative way*/
 for(const i of arr) console.log(i);
+
+/*Optional Chaining*/
+//Helps to stop accessing undefined members
+console.log(resturant.hours);
+console.log(resturant.hours?.open);
