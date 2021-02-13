@@ -289,3 +289,10 @@ const arrKey = [1, 2, 3];
 console.log(map1.set(arrKey, [2, 3, 5, 7, 11]));
 console.log(map1.has(10));
 console.log(map1.get(arrKey));
+
+//Alternate way to create map
+const map2 = new Map ([
+    ['key1', 'Assam'],
+    ['key2', 'Sivasagar']
+]);
+console.log(map2);
