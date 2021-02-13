@@ -266,3 +266,26 @@ console.log(new Set('JavaScript'));
 const set2 = new Set('Indigo', 'Go Air', 'Spice Jet', 'Indigo');//Takes only first string
 console.log(set2);
 console.log('size of set2: ' + set2.size);
+
+/*Maps*/
+//In JavaScript, a map is a data structure that we can use to map values to keys. So, just like 
+//an object, data is stored in key-value pairs in maps. Now, the difference between objects & maps
+//is that in maps, the keys can have any type and this can be huge. So, in objects, the keys are
+//basically always strings. But in maps, we can have any type of key. It could even be objects, 
+//or arrays, or other maps. So, that can lead to some really great and advanced stuff.
+//And so, we again use the constructor to create a map, the easiest way to create a map
+//is to actually create an empty map without passing anything in. And then, to fill up the map
+//we can use the set method.
+const map1 = new Map();
+map1.set('key1', 'India');
+//Calling the set method like this does not only update the map that it's called on, but it
+//also returns the map.
+console.log(map1.set('key2', 'Asia, Africa'));
+console.log(map1.set(10, 'Australia'));
+console.log(map1.get('key1'));
+console.log(map1.delete('key1'));
+const arrKey = [1, 2, 3];
+//const arrValue = [2, 3, 5, 7, 11];
+console.log(map1.set(arrKey, [2, 3, 5, 7, 11]));
+console.log(map1.has(10));
+console.log(map1.get(arrKey));
