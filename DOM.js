@@ -187,3 +187,14 @@ console.log(name, hours, locations);
 const {menu = [], resturantName: name1 = 'Kareng Resort', openingHours: hours1 = {open: 9, close: 7}} = resturant;
 console.log(menu, name1, hours1);
 console.log(resturant);
+
+/*Spread Operator*/
+const newArr = [12, 7, 3, arr];
+const newArr1 = [12, 7, 3, ...arr];
+console.log(newArr);
+console.log(newArr1);
+const str = 'Jyootimoy';
+console.log(...str);
+console.log(...str, ',', 'k', 'a', 'k', 'o', 't', 'y');
+const str1 = [...str, ...'kakoty'];
+console.log(str1);
