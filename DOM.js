@@ -176,8 +176,14 @@ console.log(arr);
 const resturant = {
     resturantName: 'Tholua, the ethnic hub',
     openingHours: {
-        open: 9,
-        close: 8
+        monToFri: {
+            open: 9,
+            close: 8
+        },
+        satToSun: {
+            open: 10,
+            close: 6
+        }
     },
     resturantLocations: ['Sivasagar', 'Gaurisagar', 'Amguri', 'Jhanji', 'Rudrasagar']
 };
@@ -234,3 +240,11 @@ for(const i of arr) console.log(i);
 //Helps to stop accessing undefined members
 console.log(resturant.hours);
 console.log(resturant.hours?.open);
+
+
+/*Object Keys, Values and Entries*/
+console.log(Object.keys(hours));
+console.log(Object.values(hours));
+console.log(Object.entries(hours));
+for(const [key, {open, close}] of Object.entries(hours))
+    console.log(`On ${key} we open at ${open} and close at ${close}`);
