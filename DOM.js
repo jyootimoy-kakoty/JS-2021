@@ -166,3 +166,9 @@ togBtn.addEventListener('click', function(){
 //of the surrounding function. So of the parent function and in technical terms, this is called the 
 //'lexical this keyword,' because it simply gets picked up from the outer lexical scope of the arrow function.
 
+/*Destructuring Arrays*/
+const arr = [2, 3, 4, 5];
+const [x, y, z, u] = arr;
+console.log(x, y, z, u);
+console.log(arr);
+
