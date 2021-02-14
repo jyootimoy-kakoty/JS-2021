@@ -311,3 +311,11 @@ console.log(price.replace('$', '₹'));
 const announcement = 'door to door campain and doorstep service!';
 console.log(announcement.replace(/door/g, 'gate'));//'/xyz/g' means regular expression, g is global
 console.log(price.padStart(10, '*'));
+
+/*Default value for Function parameters*/
+const checkDefault = function(x = 1, y = 11) {
+    console.log(x, y);
+}
+checkDefault();
+checkDefault(2, 6);
+checkDefault(5);
