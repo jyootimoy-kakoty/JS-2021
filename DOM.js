@@ -296,3 +296,18 @@ const map2 = new Map ([
     ['key2', 'Sivasagar']
 ]);
 console.log(map2);
+
+/*String*/
+const strr = 'Election 2021';
+console.log(strr.slice(9));
+console.log(strr.slice(2,10));
+console.log(strr.slice(0, strr.indexOf(' ')));
+let index = strr.indexOf(' ');
+console.log(strr.slice(0, index).toLocaleLowerCase());
+console.log('hello friend how are you?'.split(' '));
+console.log('   jyootimoy.kakoty@gmail.com 2021 '.trim());
+const price = '100$';
+console.log(price.replace('$', '₹'));
+const announcement = 'door to door campain and doorstep service!';
+console.log(announcement.replace(/door/g, 'gate'));//'/xyz/g' means regular expression, g is global
+console.log(price.padStart(10, '*'));
