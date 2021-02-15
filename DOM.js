@@ -322,3 +322,26 @@ checkDefault(5);
 
 /*JS Function Parameter Types*/
 //There is no pass by reference option available here. Only the one we can use is pass by value.
+
+/*Higher Order Function*/
+//So a higher order function is either a function that receives another function as an argument,
+//or a function that returns a new function, or does both.
+const Button = btnShowModal;
+Button[0].addEventListener('click', closeModal);
+//addEventListener() is a higher order function and closeModal is a first class function.
+
+function count() { //count() is a higher order function
+    let counter = 0;
+    console.log('counted');
+    counter++;
+    return function() {
+        counter;
+    }
+}
+
+/*forEach*/
+const right = function() {
+    console.log('✔');
+};
+['a', 'b', 'c' ,'d', 'e'].forEach(right);
+
