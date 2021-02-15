@@ -345,3 +345,44 @@ const right = function() {
 };
 ['a', 'b', 'c' ,'d', 'e'].forEach(right);
 
+/*Call and Bind*/
+//Learn later
+
+/*Immediately Invoked Function Expressions*/
+//Sometimes in JavaScript, we need a function that is only executed once. Then never again.
+//So basically a function that disappears right after it's called once.
+//But we actually need this technique later. For eg: with something called async/await.
+//So how could we do that?
+//Well, we could simply create a function and then only execute it once.
+//This will never run again.
+//However, we can actually run this function again. At some other point in the code, if we
+//want it too, right? There's nothing stopping us, from later doing run once again. 
+const runOnce = function() {
+    console.log('This will never run again');
+};
+
+runOnce();
+//So we want to actually execute a function immediately and not even having to save it somewhere.
+//And so this is how we do that.
+//We simply write the function expression itself without assigning it to any variable.
+//Now, if we try to run this, we will get an error for now. So it says function statements require
+//a function name. And that's because of course JavaScript here expects a function statement.
+//Because we simply started this line of code here with the function keyword.
+/*
+function() {
+    console.log('This will never run again');
+}
+*/
+//However, we can still trick JavaScript into thinking that this is just an expression. And we do
+//that by simply wrapping all of this into parentheses. And so now, we basically transformed the
+//statement that we had before into an expression. And so now if we save this, we get no error.
+//But also this function didn't execute yet, right? We never called it.
+(function() {
+    console.log('This will never run again');
+});
+//So we know that this here is the function. And so, we can then immediately call it.
+//It's just a function expression. And then immediately,we call it here. And so this is why this
+//pattern here, is called the Immediately Invoked Function Expression. Or IIFE for short.
+(function() {
+    console.log('This will never run again');
+})();//called function
