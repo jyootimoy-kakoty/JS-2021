@@ -319,3 +319,6 @@ const checkDefault = function(x = 1, y = 11) {
 checkDefault();
 checkDefault(2, 6);
 checkDefault(5);
+
+/*JS Function Parameter Types*/
+//There is no pass by reference option available here. Only the one we can use is pass by value.
