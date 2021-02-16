@@ -569,3 +569,48 @@ console.log(currSet);
 currSet.forEach(function(value, key, currencies){//key doesn't make any sense for set
     console.log(`${key}: ${value}`);
 });
+
+/*Map vs Filter vs Reduce*/
+//In JS, there are 3 big and important array methods that we use to perform data transformations.
+//First the map method is yet another method that we can use to loop over arrays. So, map is
+//actually similar to forEach method but with the difference that map creates a brand new array
+//based on the original array. So essentially the map method takes an array, loops over that
+//array and in each iteration, it applies a covic function that we specify on our code to the
+//current array element.
+//Map method
+//So in this example we say that each element shall be multiplied by two. And with this covic
+//in place, the map method multiplies every single element by two and puts it into a new array.
+//We say that it maps the values of the original array to a new array and that's why this
+//method is called map. 
+//Usually way more useful than in forEach method because forEach simply allows us to do some work
+//with each array element. But map on the other hand, builds us a brand new array containing the
+//results of applying an operation to the original array.
+const input = [3, 1, 4, 3, 2];
+const mapOutput = input.map(item => {return item * 2});
+console.log(input, mapOutput);
+//Filter method
+//It is used to filter for elements in the original array which satisfy a certain condition.
+//So in this example we are only looking for elements greater than two. So all the elements
+//that pass the test that we specified will make it into a new filtered array. Or in other words
+//elements for which the condition is true will be included in a new array that the filter
+//method returns. All other elements will get filtered out so they will not be included in the
+//new array. 
+const filterOutput = input.filter(item => {return item > 2});
+console.log(input, filterOutput);
+//Reduce Method
+//Finally there is also the reduce method which we use to boil down all the elements of the
+//original array into one single value. And an example of this can be to add all the elements
+//of an array together. So for the example of adding up all numbers in the array, we need to
+//specify an operation like this one where we have an accumulator variable. Then as the
+//reduce method loops over the array, it keeps adding the current element onto the accumulator
+//until at the end of the loop we have to total sum of all the elements. So you can imagine
+//this as a snowball, it keeps getting bigger and bigger as it rolls down a hill. And so this
+//is known as the snowball effect and reduce is pretty similar to that.
+const reducer = (accumulator, currentValue) => accumulator + currentValue;
+const reduceOutput = input.reduce(reducer);
+console.log(input, reduceOutput);
+//This whole process has now reduced the original array to one single value which in this case
+//is the sum of all the elements but it can of course be many other operations.
+//Now it's this value that then actually gets returned from the reduce method in the end.
+
+
