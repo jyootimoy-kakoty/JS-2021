@@ -534,3 +534,38 @@ setTimeout(function(){console.log('Please hurry up!!');}, wait = 2000); //will  
         header.style.color = 'red';
     });
 })();
+
+/*Array*/
+//splice vs slice: splice modify the current array, slice doesn't
+//for vs forEach: break statement doesn't work in forEach, it will always loop over entire array.
+const arrSample = [2, 3, 5, 7, 11, 13, 17];
+console.log(arrSample.slice(1, -2));
+console.log(arrSample);
+console.log(arrSample.splice(3));
+console.log(arrSample);
+for([ii, jj] of arrSample.entries()) {
+    console.log(`iteration ${ii++}: ${jj}`);
+}
+arrSample.forEach(function(jj, ii, arrSample){
+    console.log(`iteration ${ii++}: ${jj}`);
+});
+
+//forEach with map
+const currencies = new Map([
+    ['USD', 'USA'],
+    ['INR', 'India'],
+    ['EUR', 'Europe'],
+    ['Taka', 'Bangladesh']
+]);
+
+currencies.forEach(function(value, key, currencies){
+    console.log(`${key}: ${value}`);
+});
+
+//forEach with set
+const currSet = new Set(['USD', 'INR', 'EUR', 'INR', 'Taka', 'USD']);
+
+console.log(currSet);
+currSet.forEach(function(value, key, currencies){//key doesn't make any sense for set
+    console.log(`${key}: ${value}`);
+});
