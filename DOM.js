@@ -499,3 +499,38 @@ console.dir(booker);
 //internal property, which we cannot access from our code.
 
 //My conclusion: closure is simply static variable concept
+
+//Closure examples
+let f;
+const g = function(){
+    let a = 5;
+    f = function() {
+        console.log(a *= 3);
+    };
+};
+
+g();
+f();
+f();
+
+const h = function(){
+    let b = 5;
+    f = function() {
+        console.log(b *= 10);
+    };
+};
+h();
+f();
+f();
+
+setTimeout(function(){console.log('Please hurry up!!');}, wait = 2000); //will  display after 2 sec
+
+
+(function(){
+    const header = document.querySelector('h1');
+    header.style.color = 'blue';
+
+    document.querySelector('body').addEventListener('click', function(){
+        header.style.color = 'red';
+    });
+})();
