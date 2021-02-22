@@ -613,4 +613,49 @@ console.log(input, reduceOutput);
 //is the sum of all the elements but it can of course be many other operations.
 //Now it's this value that then actually gets returned from the reduce method in the end.
 
+/*Flat and FlatMap*/
+//So let's say that we have an array with some arrays in it. So essentially a nested array.
+//If we wanted to take all these elements in separate arrays and put all of these together
+//in just one big array, which contains all the elements, then we will used flat() method. 
+//Well, that's pretty simple, using the new flat method. Andbecause flat and also flat map
+//were introduced in ES2019. So they are pretty recent.
+const arrr = [1, [2, 3], 4, 5, [6, 7, 8]];
+const arrrr = [[1, 2 , 3], 4, 5, [6, 7, [8, 9]]];
+console.log(arrr.flat()); //only one level gets flatened bydefault or with index=1
+console.log(arrrr.flat(2)); //index 2 defines how many times we need to flat
+const flatArr = arrr.map(a => a).flat().reduce((a, c) => a + c);
+console.log(flatArr);
+//flat map essentially combines, a map and a flat method, into just one method,
+//which is better for performance.
+const flatMapArr = arrrr.flatMap(a => a).reduce((a, c) => a + c);
+console.log(flatMapArr);
+//Now just notice that, flat map here, only goes one level deep and we cannot change it.
+//So if you do need to go deeper than just one level, you still need to use the flat method.
 
+/*Sort*/
+//Sort method always takes element as string. So while sorting number it may give wrong
+//result. Specially with negative numbers.
+//We will use trick for that
+flatArr.sort((a, b) => a-b);
+
+/*Array new tricks*/
+const sample1 = [1, 2, 3, 4, 5];
+const sample2 = new Array(4);
+const sample3 = new Array(9);
+console.log(sample1, sample2);
+sample2.fill(1); //fill the array with 1
+sample3.fill(5, 2, 8); //fill with 5 from index 2 to 8-1=7
+const sample4 = Array.from({length: 6}, () => 2); //array of 6 elements with each value is 2 created
+const sample5 = Array.from({length: 10}, (_, i) => i + 1); //'_' means param not used
+
+
+/*Parse Numbers*/
+console.log(Number.parseInt('30px', 10)); //10 is defining base
+console.log(Number.parseInt('e23', 10));
+console.log(Number.parseFloat('2.5rem'));
+console.log(Number.isNaN(20));
+console.log(Number.isFinite(20));
+console.log(Number.isFinite('20')); //isFinite is a safer option than isNAN
+console.log(Number.isNaN(100/0));
+
+console.log(Math.random() * 7);
